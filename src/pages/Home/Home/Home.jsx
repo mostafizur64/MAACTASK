@@ -6,6 +6,8 @@ import backgroundImage from "../../../assets/image/banner/banner-bg.png"; // Ver
 import ProductFeatures from "../../ProductFeatures/ProductFeatures";
 import BannerOverView from "../../Banner/BannerOverView";
 import AboutUs from "../../AboutUs/AboutUs";
+import Faq from "../../Faq/Faq";
+import Brand from "../../Brand/Brand";
 
 const Home = () => {
   return (
@@ -22,6 +24,8 @@ const Home = () => {
         <BannerOverView/>
         <ProductFeatures />
         <AboutUs/>
+        <Faq/>
+        <Brand/>
         {/* Other content */}
       </div>
     </div>
