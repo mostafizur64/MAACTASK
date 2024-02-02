@@ -16,7 +16,7 @@ const FeaturesMiddleContent = () => {
             //   filter: " blur(38px)",
           }}
         >
-          <img className="bg px-2" src={featuresImg} alt="" />
+          <img className="bg px-2 md:w-[372px] w-full" src={featuresImg} alt="" />
         </div>
       </div>
     </div>

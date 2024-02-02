@@ -35,13 +35,19 @@ const Navbar = () => {
             <div className="flex items-center justify-between">
               {/* logo   */}
               <div>
-                <img src={logo} alt="logo" />
+                <Link to="/">
+                  <img src={logo} alt="logo" />
+                </Link>
               </div>
               {/* right nav  */}
               <div>
                 <div className="flex items-center justify-center md:gap-4 gap-2">
-                  <button className="btn">Login</button>
-                  <button className="btn">Registration</button>
+                  <Link to="/login">
+                    <button className="btn">Login</button>
+                  </Link>
+                  <Link to="/registration">
+                    <button className="btn">Registration</button>
+                  </Link>
                 </div>
                 {/* <span className="md:hidden" onClick={toggleMenu}>
                 <BiMenu className="w-6 h-6 cursor-pointerF" />

@@ -9,7 +9,7 @@ const Footer = () => {
     <div className="bg-[#00193D]">
       <Container>
         <div className="py-12">
-          <div className="text-center  space-y-8">
+          <div className="text-center md:space-y-8 space-y-6">
             {/* logo =========== */}
             <div className="flex items-center justify-center ">
               <img src={logo} alt="logo" className="text-white" />
@@ -19,7 +19,7 @@ const Footer = () => {
               accusantium doloremque laudantium, totam rem aperiam eaque.
             </p>
             {/* social icons  */}
-            <div className="flex items-center justify-center gap-4">
+            <div className="flex items-center justify-center gap-4 ">
               <div className="bg-[#fff] rounded-full w-[40px] h-[40px] flex items-center justify-center hover:scale-110 duration-300">
                 <Link to="https://twitter.com/">
                   <FaTwitter className="h-5 w-5" />
@@ -35,6 +35,11 @@ const Footer = () => {
                   <FaFacebookF className="h-5 w-5" />
                 </Link>
               </div>
+            </div>
+
+            {/* bottom content ================ */}
+            <div className="border-t border-[#0D3166] py-8">
+                <h2 className="text-white text-[14px]">© All rights reserve by <span className="text-red-500">MAAC</span></h2>
             </div>
           </div>
         </div>

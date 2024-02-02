@@ -9,7 +9,7 @@ const BannerOverView = () => {
         <div className="md:py-10 py-6 relative md:px-[20px] md:-mt-[630px] -mt-[680px] md:flex items-center justify-center">
           <img src={tablet} alt="" className="" />
           <img
-            className="md:absolute -bottom-16 right-40 md:mt-0 mt-4"
+            className="md:absolute -bottom-16 right-40 md:mt-0 mt-4 md:w-[323px] w-full"
             src={phone}
             alt=""
           />
