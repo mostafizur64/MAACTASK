@@ -5,6 +5,7 @@ import { toast } from "react-toastify";
 import { useAuth } from "../../Providers/AuthContext";
 import backgroundImg from '../../assets/image/Bg/backgroundImg.png'
 import Navbar from "../../Shared/Navbar";
+import { Helmet } from "react-helmet-async";
 const Registration = () => {
  
   const navigate = useNavigate();
@@ -66,6 +67,10 @@ const Registration = () => {
       backgroundRepeat: "no-repeat",
       backgroundSize: "cover",
     }}>
+        <Helmet>
+        <title>FieldX | Registration</title>
+      </Helmet>
+
       <Navbar/>
       <Container>
        

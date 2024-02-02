@@ -3,8 +3,9 @@ import Container from "../../component/Container/Container";
 import { Link, useNavigate } from "react-router-dom";
 import { toast } from "react-toastify";
 import { useAuth } from "../../Providers/AuthContext";
-import backgroundImg from '../../assets/image/Bg/backgroundImg.png'
+import backgroundImg from "../../assets/image/Bg/backgroundImg.png";
 import Navbar from "../../Shared/Navbar";
+import { Helmet } from "react-helmet-async";
 const Login = () => {
   const navigate = useNavigate();
   const [loading, setLoading] = useState(false);
@@ -15,7 +16,7 @@ const Login = () => {
     const token = localStorage.getItem("token");
     const user = JSON.parse(localStorage.getItem("user"));
 
-    console.log(user,"user user",token,"token token")
+    console.log(user, "user user", token, "token token");
 
     if (token && user) {
       setAuthInfo(token, user);
@@ -34,13 +35,16 @@ const Login = () => {
     setLoading(true);
 
     try {
-      const res = await fetch(`https://staging-api.erpxbd.com/api/v1/users/login`, {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify(data),
-      });
+      const res = await fetch(
+        `https://staging-api.erpxbd.com/api/v1/users/login`,
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify(data),
+        }
+      );
       const results = await res.json();
 
       if (!res.ok) {
@@ -64,18 +68,26 @@ const Login = () => {
   };
 
   return (
-    <div style={{
-      backgroundImage: `url(${backgroundImg})`,
-      backgroundPosition: "",
-      backgroundRepeat: "no-repeat",
-      backgroundSize: "cover",
-    }}>
-      <Navbar/>
+    <div
+      style={{
+        backgroundImage: `url(${backgroundImg})`,
+        backgroundPosition: "",
+        backgroundRepeat: "no-repeat",
+        backgroundSize: "cover",
+      }}
+    >
+        <Helmet>
+        <title>FieldX | Login</title>
+      </Helmet>
+
+      <Navbar />
       <Container>
         <div className="bg-[#fff] md:text-[20px] text-[16px] md:px-24 px-4 rounded-lg md:py-[80px] py-[30px] text-center shadow-lg md:mt-36 mt-4 ">
           <div className="md:px-[240px] ">
             <div>
-              <h2 className="md:text-[40px] text-[30px] font-bold">Welcome Back!</h2>
+              <h2 className="md:text-[40px] text-[30px] font-bold">
+                Welcome Back!
+              </h2>
               <p className="text-paragraphColor md:mt-4 mt-2 md:text-[24px] text-[16px]">
                 Please login to your account
               </p>
