@@ -12,7 +12,7 @@ const Banner = () => {
         backgroundRepeat: "no-repeat",
         backgroundSize: "cover",
       }}>
-        Navbar
+       
           <Navbar/>
         <Container className="">
           {/* Content */}
